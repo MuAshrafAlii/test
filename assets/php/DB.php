@@ -1,6 +1,6 @@
 <?php
 
-$dbFile = "F:\\00.Mido\\0.Local Server\htdocs\Projects\book-test\assets\db\db.accdb";
+$dbFile = dirname(__DIR__) . "/db/db.accdb";
 
 $db = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=".$dbFile.";Uid=; Pwd=;");
 
