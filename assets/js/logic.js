@@ -60,7 +60,7 @@ xhttp.onreadystatechange = function () {
     nextBtn.addEventListener("click", () => {
       let currentQ = currentQuestion(qContainers, responses);
       removeActive(qContainers);
-      if (currentQ.id === 8) {
+      if (currentQ.id === qContainers.length) {
         qContainers[0].classList.add("active");
         currentQ = responses[0];
       } else {
