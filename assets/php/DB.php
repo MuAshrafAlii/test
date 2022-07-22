@@ -8,8 +8,6 @@ $sql = "SELECT * FROM q";
 
 $results = $db->query($sql)->fetchAll();
 
-/* echo "<pre>"; print_r($results); echo "</pre>"; */
-
 $currentExam = [];
 $currentQuestionId = 0;
 
@@ -29,7 +27,6 @@ foreach($results as $result) {
             }
     }
     }
-    /* echo "<pre>"; print_r($allAttch); echo "</pre>"; */
 
     $currentExam[] = [
         "id" => ++$currentQuestionId,
@@ -41,10 +38,5 @@ foreach($results as $result) {
         ]
     ];
 }
-
-
-/* echo "<pre>"; print_r($currentExam); echo "</pre>"; */
 echo json_encode($currentExam);
-
-/* echo $results[9]["details"]; */
 ?>

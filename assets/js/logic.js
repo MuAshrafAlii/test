@@ -72,7 +72,12 @@ xhttp.onreadystatechange = function () {
       rAnswerContent.innerHTML = currentQ.answer;
       rAnswerSanitization(Array.from(rAnswerContent.children));
       addAttch(rAnswerContent, currentQ);
-      hideAnswer();
+      let currentDivStatus =
+        qContainers[currentQ.id - 1].querySelector(".status");
+      window.getComputedStyle(currentDivStatus).backgroundColor ===
+      "rgb(45, 198, 83)"
+        ? showAnswer()
+        : hideAnswer();
       updateCurrent();
     });
 
@@ -91,7 +96,12 @@ xhttp.onreadystatechange = function () {
       rAnswerContent.innerHTML = currentQ.answer;
       rAnswerSanitization(Array.from(rAnswerContent.children));
       addAttch(rAnswerContent, currentQ);
-      hideAnswer();
+      let currentDivStatus =
+        qContainers[currentQ.id - 1].querySelector(".status");
+      window.getComputedStyle(currentDivStatus).backgroundColor ===
+      "rgb(45, 198, 83)"
+        ? showAnswer()
+        : hideAnswer();
       updateCurrent();
     });
 
@@ -139,7 +149,6 @@ xhttp.onreadystatechange = function () {
         ) {
           x++;
         }
-        console.log(x);
       });
 
       let mark = x * 10;
