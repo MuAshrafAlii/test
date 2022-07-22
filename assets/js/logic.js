@@ -51,7 +51,11 @@ xhttp.onreadystatechange = function () {
         rAnswerContent.innerHTML = currentQ.answer;
         rAnswerSanitization(Array.from(rAnswerContent.children));
         addAttch(rAnswerContent, currentQ);
-        hideAnswer();
+        let currentDivStatus = qContainer.querySelector(".status");
+        window.getComputedStyle(currentDivStatus).backgroundColor ===
+        "rgb(45, 198, 83)"
+          ? showAnswer()
+          : hideAnswer();
         updateCurrent();
       });
     });
