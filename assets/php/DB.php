@@ -5,6 +5,7 @@ $dbFile = dirname(__DIR__) . "/db/db.accdb";
 $db = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=".$dbFile.";Uid=; Pwd=;");
 
 # For random order and limit "SELECT TOP 3 * FROM q ORDER BY rnd(-(100000*id)*Time())"
+# SELECT * FROM q WHERE Question LIKE 'project%';
 $sql = "SELECT * FROM q";
 
 $results = $db->query($sql)->fetchAll();
@@ -31,7 +32,7 @@ foreach($results as $result) {
 
     $currentExam[] = [
         "id" => ++$currentQuestionId,
-        "question" => $result['id'],
+        "question" => $result['Question'],
         "answer" => $result['Answer'],
         "attachments" => [
             "imgs" => $imgs,
