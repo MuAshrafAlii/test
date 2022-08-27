@@ -1,6 +1,6 @@
 <?php
 
-echo $_SERVER['DOCUMENT_ROOT'] . "/assets/db/db.accdb";
+echo $_SERVER['DOCUMENT_ROOT'] . "/../assets/db/db.accdb";
 
 ?>
 
