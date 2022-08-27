@@ -1,6 +1,6 @@
 <?php
 
-$dbFile = dirname(__DIR__) . "/db/db.accdb";
+$dbFile = "../db/db.accdb";
 
 $db = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=".$dbFile.";Uid=; Pwd=;");
 
