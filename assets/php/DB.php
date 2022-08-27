@@ -1,6 +1,8 @@
 <?php
 
-$dbFile = $_SERVER['DOCUMENT_ROOT'] . "/lala/assets/db/db.accdb";
+$dbFile = $_SERVER['DOCUMENT_ROOT'] . "/test-yourself/assets/db/db.accdb";
+
+echo $dbFile;
 
 $db = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=".$dbFile.";Uid=; Pwd=;");
 
