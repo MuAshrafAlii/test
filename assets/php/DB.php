@@ -1,6 +1,6 @@
 <?php
 
-$dbFile = $_SERVER['DOCUMENT_ROOT'] . "/test-yourself/assets/db/db.accdb";
+$dbFile = $_SERVER['DOCUMENT_ROOT'] . "/assets/db/db.accdb";
 
 echo $dbFile;
 
