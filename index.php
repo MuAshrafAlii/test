@@ -1,3 +1,9 @@
+<?php
+
+echo $_SERVER['DOCUMENT_ROOT'] . "/assets/db/db.accdb";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
