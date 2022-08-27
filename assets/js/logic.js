@@ -162,7 +162,7 @@ xhttp.onreadystatechange = function () {
     }
   }
 };
-xhttp.open("GET", "../php/DB.php");
+xhttp.open("GET", "./assets/php/DB.php");
 xhttp.send();
 
 /* ------------------------------------------------------------------------------ */
